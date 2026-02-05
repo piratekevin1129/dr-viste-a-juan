@@ -1,0 +1,91 @@
+@media (min-width: 1537px) {
+
+    #loader-img{
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    #loader-bar{
+        width: 300px;
+        height: 15px;
+        border-radius: 10px;
+    }
+    #loader-bar2{
+        border-radius: 10px;
+    }
+
+    #titulo h1,#titulo h2{
+        font-size: 31px;
+    }
+    #titulo h1{
+        margin: 10px 0px;
+    }
+    #titulo h2{
+        padding: 10px 20px;
+    }
+
+    #ref-comprobar{
+        width: 200px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px; 
+    }
+
+    #comprobar-btn{
+        border-radius: 8px;
+        font-size: 24px;
+    }
+    #comprobar-btn::after{
+        border-radius: 8px;
+    }
+
+    /*******************/
+
+    #instruccion-box{
+        width: 500px;
+        padding: 40px;
+        padding-top: 80px;
+        border-radius: 12px;
+        border-top: #E20613 solid 5px;
+        left: 50%;
+        left: calc(50% - 250px);
+        left: -moz-calc(50% - 250px);
+        top: 50%;
+        top: calc(50% - 250px);
+        top: -moz-calc(50% - 250px);
+    }
+    #instruccion-box-icon{
+        top: -60px;
+        left: 50%;
+        left: calc(50% - 50px);
+        left: -moz-calc(50% - 50px);
+        width: 120px;
+        height: 120px;
+        border: #ffffff solid 7px;
+        background-size: 65px;
+    }
+    #instruccion-title{
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    #instruccion-text{
+        padding: 15px;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    #instruccion-btn{
+        height: 50px;
+        border-radius: 6px;
+        font-size: 21px;
+    }
+
+    /*****************************/
+}
+
+/*@media (min-width: 1281px) and (max-width: 1537px){
+    --default
+}*/
+
+@media (min-width: 960px) and (max-width: 1280px){
+
+}

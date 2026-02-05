@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="assets/css/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/escaparate.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/casilleros.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/personaje.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/loader.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/instruccion.css" rel="stylesheet" type="text/css" />
+
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    <title>Estandar de seguridad para mensajeros</title>
+
+    <script>
+        function getE(idname){
+            return document.getElementById(idname)
+        }
+    </script>
+</head>
+<body>
+    <div id="contenedor" class="contenedor-blur-off">
+        <div id="fondo">
+            <div id="titulo">
+                <h1>Estandar de seguridad</h1>
+                <h2>Para mensajeros</h2>
+            </div>
+        </div>
+        <div id="app">
+            <div class="escaparate">
+                <div id="escaparate-left"></div>
+                <div id="escaparate-right"></div>
+            </div>
+
+            <div id="personaje">
+                <div id="personaje-label" class="personaje-label-off">
+                    <p>Camisa y pantalón de dotación otorgado por la empresa, con logo de la cooperativa <a onclick="clickVerMas(null)">Ver más...</a></p>
+                </div>
+                <img id="personaje-img" src="assets/images/personaje.png" />
+                <div id="personaje-epps"></div>
+                <div id="personaje-partes">
+                    <!--cabeza-->
+                    <div class="personaje-parte" id="personaje-parte-1">
+                        <div></div>
+                    </div>
+                    <!--cara-->
+                    <div class="personaje-parte" id="personaje-parte-2">
+                        <div></div>
+                    </div>
+                    <!--cuello-->
+                    <div class="personaje-parte" id="personaje-parte-3">
+                        <div></div>
+                    </div>
+                    <!--pecho-->
+                    <div class="personaje-parte" id="personaje-parte-4">
+                        <div></div>
+                    </div>
+                    <!--codos-->
+                    <div class="personaje-parte" id="personaje-parte-5">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <!--manos-->
+                    <div class="personaje-parte" id="personaje-parte-6">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <!--bolsillo derecho-->
+                    <div class="personaje-parte" id="personaje-parte-7">
+                        <div></div>
+                    </div>
+                    <!--bolsillo izquierdo-->
+                    <div class="personaje-parte" id="personaje-parte-8">
+                        <div></div>
+                    </div>
+                    <!--rodillas-->
+                    <div class="personaje-parte" id="personaje-parte-9">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <!--pies-->
+                    <div class="personaje-parte" id="personaje-parte-10">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ref-comprobar">
+                <button type="button" id="comprobar-btn" class="comprobar-btn-enabled">
+                    <span>Comprobar</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="epp-move" class="epp-move-off"></div>
+
+    <div id="instruccion" class="instruccion-off">
+        <div id="instruccion-back">
+            <div id="instruccion-back-mask"></div>
+        </div>
+        <div id="instruccion-box">
+            <div id="instruccion-box-icon" class="instruccion-box-icon-default"></div>
+            <h1 id="instruccion-title">...</h1>
+            <p id="instruccion-text">...</p>
+            <button type="button" id="instruccion-btn">
+                <span>...</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="loader" class="loader-on">
+        <div id="loader-img"></div>
+        <div id="loader-bar">
+            <div id="loader-bar2"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/instrucciones.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/elementos.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script>
+        var abrir_mp3 = null;
+        var boton_mp3 = null;
+        var click_mp3 = null;
+        var coger_mp3 = null;
+        var correcto_mp3 = null;
+        var incorrecto_mp3 = null;
+        var ganar_mp3 = null;
+
+        window.onload = function(){
+            loadTrack({src: 'assets/sounds/abrir.mp3', callBack: function(data){
+                abrir_mp3 = data
+                checkAudios(true)
+            }})
+            loadTrack({src: 'assets/sounds/boton.mp3', callBack: function(data){
+                boton_mp3 = data
+                checkAudios(true)
+            }})
+            loadTrack({src: 'assets/sounds/click.mp3', callBack: function(data){
+                click_mp3 = data
+                checkAudios(true)
+            }})
+            loadTrack({src: 'assets/sounds/coger.mp3', callBack: function(data){
+                coger_mp3 = data
+                checkAudios(true)
+            }})
+            loadTrack({src: 'assets/sounds/correcto.mp3', callBack: function(data){
+                correcto_mp3 = data
+                checkAudios(true)
+            }})
+            loadTrack({src: 'assets/sounds/incorrecto.mp3', callBack: function(data){
+                incorrecto_mp3 = data
+                checkAudios(true)
+            }})
+            loadTrack({src: 'assets/sounds/ganar.mp3', callBack: function(data){
+                ganar_mp3 = data
+                checkAudios(true)
+            }})                
+        }
+
+        function comenzarJuego(){
+            loadCasilleros()
+        }
+
+        function comenzarJuego2(){
+            unsetLoader()
+            instrucciones_data[0].ref = 'casillero-'+elementos_data[elementos_epp[0]].id
+            setInstrucciones()
+            getE("personaje-label").className = "personaje-label-on"
+        }
+
+    </script>
+</body>
+</html>

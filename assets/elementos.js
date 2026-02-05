@@ -1,0 +1,263 @@
+var personaje_data = {
+    width:229,
+    height:675
+}
+
+var elementos_data = [{
+    id:1,
+    label:'Licencia de conducción',
+    descripcion:'Vigente, categoría A2, certificada por el Ministerio de Tránsito y Transporte.',
+    cuerpo:'bolsillo',
+    img:'licensia.png',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'1/2',//alto
+    size2:[48,31,132,357],
+    required:true,
+    correct:'7'
+},{
+    id:2,
+    label:'Tarjeta de propiedad del vehículo',
+    descripcion:'Debe estar a nombre del trabajador Revisión técnico-mecánica y de gases.',
+    cuerpo:'bolsillo',
+    img:'tarjeta.png',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'1/2',//alto
+    size2:[48,31,132,357],
+    required:true,
+    correct:'7'
+},{
+    id:3,
+    label:'Revisión técnico-mecánica',
+    descripcion:'y gases, certificación actualizada.',
+    cuerpo:'bolsillo',
+    img:'tecnomecanica.png',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'2/3',//alto
+    size2:[46,65,133,337],
+    required:true,
+    correct:'8'
+},{
+    id:4,
+    label:'SOAT',
+    descripcion:'Seguro Obligatorio contra Accidentes de Tránsito vigente.',
+    cuerpo:'bolsillo',
+    img:'soat.png',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'2/3',//alto
+    size2:[46,65,133,337],
+    required:true,
+    correct:'8'
+},{
+    id:5,
+    label:'Chaqueta o Prenda reflectiva',
+    descripcion:'Cuando se conduzca entre las 18:00 pm y las 6:00 am horas del día siguiente, y siempre que la visibilidad sea escasa.',
+    cuerpo:'pecho',
+    img:'chaqueta.png',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'1',//alto
+    size2:[236,259,-4,101],
+    required:true,
+    correct:'4'
+},{
+    id:6,
+    label:'Coderas',
+    descripcion:'',
+    cuerpo:'codos',
+    img:'coderas.png',
+    img2:'coderas2.png',
+    imgdata:null,
+    imgdata2:null,
+    size1:'1/3',//alto
+    size2:[229,57,0,219],
+    required:true,
+    correct:'5'
+},{
+    id:7,
+    label:'Guantes',
+    descripcion:'Se deberán portar permanentemente durante la conducción de la motocicleta',
+    cuerpo:'manos',
+    img:'guantes.png',
+    img2:'guantes2.png',
+    imgdata:null,
+    imgdata2:null,
+    size1:'1/3',//alto
+    size2:[227,62,1,347],
+    required:true,
+    correct:'6'
+},{
+    id:8,
+    label:'Rodilleras',
+    descripcion:'',
+    cuerpo:'rodillas',
+    img:'rodilleras.png',
+    img2:'rodilleras2.png',
+    imgdata:null,
+    imgdata2:null,
+    size1:'2/3',//alto
+    size2:[141,76,44,454],
+    required:true,
+    correct:'9'
+},{
+    id:9,
+    label:'Botas de seguridad con puntera',
+    descripcion:'',
+    cuerpo:'pies',
+    img:'botas.png',
+    img2:'botas2.png',
+    imgdata:null,
+    imgdata2:null,
+    size1:'4/5',//alto
+    size2:[213,126,8,548],
+    required:true,
+    correct:'10'
+},{
+    id:10,
+    label:'Bufanda',
+    descripcion:'',
+    cuerpo:'cuello',
+    img:'demo2.png',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'2/3',//alto
+    size2:[97,94,54,95],
+    required:false,
+    correct:'3'
+},{
+    id:11,
+    label:'',
+    descripcion:'',
+    cuerpo:'',
+    img:'',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'',//alto
+    size2:[]
+},{
+    id:12,
+    label:'',
+    descripcion:'',
+    cuerpo:'',
+    img:'',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'',//alto
+    size2:[]
+},{
+    id:13,
+    label:'',
+    descripcion:'',
+    cuerpo:'',
+    img:'',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'',//alto
+    size2:[]
+},{
+    id:14,
+    label:'',
+    descripcion:'',
+    cuerpo:'',
+    img:'',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'',//alto
+    size2:[]
+},{
+    id:15,
+    label:'',
+    descripcion:'',
+    cuerpo:'',
+    img:'',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'',//alto
+    size2:[]
+},{
+    id:16,
+    label:'',
+    descripcion:'',
+    cuerpo:'',
+    img:'',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'',//alto
+    size2:[]
+},{
+    id:17,
+    label:'',
+    descripcion:'',
+    cuerpo:'',
+    img:'',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'',//alto
+    size2:[]
+},{
+    id:18,
+    label:'',
+    descripcion:'',
+    cuerpo:'',
+    img:'',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'',//alto
+    size2:[]
+},{
+    id:19,
+    label:'',
+    descripcion:'',
+    cuerpo:'',
+    img:'',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'',//alto
+    size2:[]
+},{
+    id:20,
+    label:'',
+    descripcion:'',
+    cuerpo:'',
+    img:'',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'',//alto
+    size2:[]
+}]
+
+var elementos_correctos = [1,2,3,4,5,6,7,8,9]
+
+var elementos_epp1 = []
+while(elementos_epp1.length<elementos_data.length){
+    var r = getRand(1,elementos_data.length)
+    if(elementos_epp1.indexOf(r)==-1){
+        elementos_epp1.push(r)
+    }
+}
+
+//var elementos_epp = [0,1,2,3,4,5,6,7,8]
+var elementos_epp = []
+for(i = 0;i<elementos_epp1.length;i++){
+    elementos_epp.push(elementos_epp1[i]-1)
+}
+console.log(elementos_epp)

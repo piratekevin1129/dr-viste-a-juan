@@ -1,0 +1,182 @@
+#personaje{
+    position: absolute;
+    width: 170px;
+    height: 500px;
+    transform: translateX(-50%);
+    left: 46%;
+    top: 0%;
+    top: calc(50% - (500px / 2));
+    top: -moz-calc(50% - (500px / 2));
+}
+#personaje-label{
+    position: absolute;
+    width: 270px;
+    background-color: #FEFCE8;
+    border-radius: 4px;
+    height: auto;
+    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 7px 14px -2px rgba(0,0,0,0.6);
+}
+#personaje-label::after{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    box-sizing: content-box;
+    border-left: rgba(0,0,0,0) solid 5px;
+    border-right: rgba(0,0,0,0) solid 5px;
+    border-top: #FEFCE8 solid 10px;
+    left: 50%;
+    left: calc(50% - 5px);
+    left: -moz-calc(50% - 5px);
+    top: 100%;
+}
+.personaje-label-on{
+    bottom: 100%;
+    bottom: calc(100% + 15px);
+    bottom: -moz-calc(100% + 15px);
+    opacity: 1;
+
+    transition: bottom 1s ease-out, opacity 1s ease-out;
+}
+.personaje-label-off{
+    bottom: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: bottom 1s ease-out, opacity 1s ease-out, visibility 1s;
+}
+
+#personaje-label p{
+    width: 100%;
+    font-family: 'Helvetica';
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+}
+#personaje-label p a{
+    text-decoration: underline;
+    color: #E20613;
+    font-family: 'Helvetica-Bold';
+    cursor: pointer;
+}
+
+#personaje-img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#personaje-partes,
+#personaje-epps{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.personaje-parte{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.personaje-parte > div{
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+.personaje-parte > div::after,
+.personaje-parte > div::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(106,191,244,1);
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+
+.personaje-parte-active > div::after{
+    animation: animacion-parte-active1 infinite 1s forwards linear;
+}
+.personaje-parte-active > div::before{
+    animation: animacion-parte-active2 infinite 1s forwards linear;
+}
+
+@keyframes animacion-parte-active1 {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    33%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    66%,100%{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+@keyframes animacion-parte-active2 {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    33%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    66%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+#personaje-parte-1{top: 2%; left: 50%;}
+#personaje-parte-2{top: 10%; left: 50%;}
+#personaje-parte-3{top: 18%; left: 50%;}
+#personaje-parte-4{top: 35%; left: 50%; width: 50px; height: 50px;}
+#personaje-parte-4 > div{height: 50px; width: 50px;}
+#personaje-parte-5{top: 38%; left: 50%; width: 100%;}
+#personaje-parte-6{top: 55%; left: 50%; width: 100%;}
+#personaje-parte-7{top: 56%; left: 74%;}
+#personaje-parte-8{top: 56%; left: 26%;}
+#personaje-parte-9{top: 74%; left: 50%; width: 65%;}
+#personaje-parte-10{top: 90%; left: 50%; width: 70%;}
+
+#epp-move,.personaje-epp{
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.personaje-epp{
+    z-index: 1;
+    animation: animacion-epp-entrada 0.5s 1 linear forwards;
+}
+@keyframes animacion-epp-entrada {
+    0%{
+        filter: blur(5px);
+        opacity: 0;
+    }
+    100%{
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+#personaje-epp-5{
+    z-index: 0;
+}

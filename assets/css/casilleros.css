@@ -1,0 +1,109 @@
+.casillero{
+    position: absolute;
+}
+
+.casillero-epp{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.casillero-epp img{
+    position: relative;
+    display: block;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.casillero-epp-visible{
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    transition: transform 0.15s, opacity 0.15s;
+}
+.casillero-epp-invisible{
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.15s, opacity 0.15s;
+}
+
+
+.casillero-label{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    left: 0px;
+    top: 0px;
+    background-color: #E20613;
+    font-family: 'Helvetica';
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.casillero-puerta{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    perspective: 800px;
+    pointer-events: none;
+}
+.casillero-puerta-fondo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.casillero-zona{
+    position: absolute;
+    cursor: pointer;
+    /*background-color: rgba(255,0,0,0.2);*/
+    top: 0px;
+    height: 100%;
+}
+.casillero-opened{
+    z-index: 1;
+}
+#escaparate-left .casillero-opened .casillero-puerta-fondo{
+    transform: rotateY(-120deg);
+    box-shadow: 4px 0px 5px -1px rgba(0,0,0,0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+#escaparate-right .casillero-opened .casillero-puerta-fondo{
+    transform: rotateY(120deg);
+    box-shadow: -4px 0px 5px -1px rgba(0,0,0,0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.casillero-closed .casillero-puerta-fondo{
+    transform: rotateY(0deg);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+#escaparate-left .casillero-opened .casillero-zona{
+    width: 65%;
+    left: -65%;
+}
+#escaparate-right .casillero-opened .casillero-zona{
+    width: 65%;
+    left: 100%;
+} 
+.casillero-closed .casillero-zona{
+    width: 100%;
+    left: 0px;
+}
+
+#escaparate-left .casillero-puerta-fondo{
+    transform-origin: left center;
+    background-image: url(../images/puerta-left.png);
+}
+
+#escaparate-right .casillero-puerta-fondo{
+    transform-origin: right center;
+    background-image: url(../images/puerta-right.png);
+}
