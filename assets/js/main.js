@@ -303,10 +303,13 @@ function comprobarPersonaje(){
     //mirar que hay en el personaje
     var epp_nuevos = getE('personaje-epps').getElementsByTagName('div')
     var correctos = 0;
+    var incorrectos = [];
     for(i = 0;i<epp_nuevos.length;i++){
         var data_id = Number(epp_nuevos[i].getAttribute('data-id'))
         if(elementos_correctos.indexOf(data_id)!=-1){
             correctos++;
+        }else{
+            incorrectos.push(data_id)
         }
     }
 
@@ -334,6 +337,13 @@ function comprobarPersonaje(){
         },2000)
         ganar_mp3.play()
     }else{
+        //quitar los incorrectos
+        for(i = 0;i<incorrectos.length;i++){
+            var epp_incorrecto = getE('personaje-epp-'+incorrectos[i])
+            getE('personaje-epps').removeChild(epp_incorrecto)
+            //ponerlo visible en el escaparate
+            getE('casillero-epp-'+incorrectos[i]).className = 'casillero-epp-visible'
+        }
         setInstruccion2({
             title:'Incorrecto',
             text:'Algunos equipos de protección personal no son los correctos o están incompletos',
