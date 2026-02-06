@@ -296,6 +296,9 @@ function clickVerMas(inf){
     })
 }
 
+var animacion_contenedor = null
+var actividad_finalizada = false;
+
 function comprobarPersonaje(){
     //mirar que hay en el personaje
     var epp_nuevos = getE('personaje-epps').getElementsByTagName('div')
@@ -307,11 +310,29 @@ function comprobarPersonaje(){
         }
     }
 
-    console.log(correctos)
     if(correctos==elementos_correctos.length){
-        ganar_mp3.play()
-
+        actividad_finalizada = true
+        instrucciones_data = []
         //comenzar recorrido para explicación de epp
+        for(i = 0;i<elementos_correctos.length;i++){
+            var ind = findElementoId(elementos_correctos[i])
+            instrucciones_data.push({
+                title:elementos_data[ind].label,
+                text:elementos_data[ind].descripcion,
+                value:'Siguiente',
+                ref:'personaje-epp-'+elementos_data[ind].id,
+                orientation:'right'
+            })
+        }
+        getE('contenedor').className = 'contenedor-left'
+        animacion_contenedor = setTimeout(function(){
+            clearTimeout(animacion_contenedor)
+            animacion_contenedor = null;
+
+            current_instruccion = 0
+            setInstrucciones()
+        },2000)
+        ganar_mp3.play()
     }else{
         setInstruccion2({
             title:'Incorrecto',
@@ -319,4 +340,14 @@ function comprobarPersonaje(){
             label:'Intentar de nuevo'
         })
     }
+}
+
+function findElementoId(id){
+    var inx = -1;
+    for(j = 0;j<elementos_data.length;j++){
+        if(elementos_data[j].id==id){
+            inx = j
+        }
+    }
+    return inx;
 }

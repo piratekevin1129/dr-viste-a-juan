@@ -22,14 +22,15 @@
     </script>
 </head>
 <body>
-    <div id="contenedor" class="contenedor-blur-off">
+    <div id="contenedor" class="contenedor-initial">
         <div id="fondo">
+            <img id="fondo-img" src="assets/images/fondo.jpg" />
             <div id="titulo">
                 <h1>Estandar de seguridad</h1>
                 <h2>Para mensajeros</h2>
             </div>
         </div>
-        <div id="app">
+        <div id="app" class="app-initial">
             <div class="escaparate">
                 <div id="escaparate-left"></div>
                 <div id="escaparate-right"></div>
@@ -172,7 +173,6 @@
             unsetLoader()
             instrucciones_data[0].ref = 'casillero-'+elementos_data[elementos_epp[0]].id
             setInstrucciones()
-            getE("personaje-label").className = "personaje-label-on"
         }
 
     </script>

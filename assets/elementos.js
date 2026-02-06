@@ -39,7 +39,7 @@ var elementos_data = [{
     imgdata:null,
     imgdata2:null,
     size1:'2/3',//alto
-    size2:[46,65,133,337],
+    size2:[46,65,52,337],
     required:true,
     correct:'8'
 },{
@@ -52,7 +52,7 @@ var elementos_data = [{
     imgdata:null,
     imgdata2:null,
     size1:'2/3',//alto
-    size2:[46,65,133,337],
+    size2:[46,65,52,337],
     required:true,
     correct:'8'
 },{
@@ -71,7 +71,7 @@ var elementos_data = [{
 },{
     id:6,
     label:'Coderas',
-    descripcion:'',
+    descripcion:'Coderas',
     cuerpo:'codos',
     img:'coderas.png',
     img2:'coderas2.png',
@@ -97,7 +97,7 @@ var elementos_data = [{
 },{
     id:8,
     label:'Rodilleras',
-    descripcion:'',
+    descripcion:'Rodilleras',
     cuerpo:'rodillas',
     img:'rodilleras.png',
     img2:'rodilleras2.png',
@@ -110,7 +110,7 @@ var elementos_data = [{
 },{
     id:9,
     label:'Botas de seguridad con puntera',
-    descripcion:'',
+    descripcion:'Botas de seguridad con puntera',
     cuerpo:'pies',
     img:'botas.png',
     img2:'botas2.png',
@@ -123,7 +123,7 @@ var elementos_data = [{
 },{
     id:10,
     label:'Bufanda',
-    descripcion:'',
+    descripcion:'Bufanda',
     cuerpo:'cuello',
     img:'demo2.png',
     img2:'',

@@ -1,28 +1,24 @@
 var instrucciones_data = [{
     title:'Abre un casillero',
     text:'Haz clic en cualquiera de los casilleros para abrirlo.',
-    icon:'2',
     value:'Continuar',
     ref:null,
     orientation:'right'
 },{
     title:'Arrastra',
     text:'Haz clic sostenido sobre el elemento de protección personal y arrástralo hacia el personaje.',
-    icon:'2',
     value:'Continuar',
     ref:'personaje',
     orientation:'right'
 },{
     title:'Comprobar',
     text:'Haz clic en el botón comprobar para verificar que todos los elementos de protección personal esten puestos correctamente',
-    icon:'2',
     value:'Entendido',
     ref:'ref-comprobar',
     orientation:'top'
 }]
 
 var current_instruccion = 0
-
 
 function setInstrucciones(){
     prepareInstruccion()
@@ -106,10 +102,14 @@ function prepareInstruccion(in_game = false,data = null){
 
 function nextInstruccion(){
     if(current_instruccion==(instrucciones_data.length-1)){
-        getE('instruccion').className = "instruccion-off"
-        
-        getE('comprobar-btn').setAttribute('onclick','comprobarPersonaje()')
-        click_mp3.play()
+        if(actividad_finalizada){
+            //siguiente actividad aquí
+        }else{
+            getE('instruccion').className = "instruccion-off"
+            getE("personaje-label").className = "personaje-label-on"
+            getE('comprobar-btn').setAttribute('onclick','comprobarPersonaje()')
+            click_mp3.play()
+        }
     }else{
         current_instruccion++
         prepareInstruccion()
