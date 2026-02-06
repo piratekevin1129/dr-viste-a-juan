@@ -19,9 +19,7 @@
 #escaparate-right{
     position: absolute;
     top: 0px;
-    height: auto;
-    height: calc(7px + 119px + 7px + 115px + 7px + 119px + 7px + 120px + 13px);
-    height: -moz-calc(7px + 119px + 7px + 115px + 7px + 119px + 7px + 120px + 13px);
+    height: 505px;
 }
 #escaparate-left{
     left: 0px;

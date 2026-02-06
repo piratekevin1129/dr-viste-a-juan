@@ -5,8 +5,8 @@
     transform: translateX(-50%);
     left: 46%;
     top: 0%;
-    top: calc(50% - (500px / 2));
-    top: -moz-calc(50% - (500px / 2));
+    top: calc(55% - (500px / 2));
+    top: -moz-calc(55% - (500px / 2));
 }
 #personaje-label{
     position: absolute;

@@ -5,6 +5,7 @@ var personaje_data = {
 
 var elementos_data = [{
     id:1,
+    audio:'1.mp3',
     label:'Licencia de conducción',
     descripcion:'Vigente, categoría A2, certificada por el Ministerio de Tránsito y Transporte.',
     cuerpo:'bolsillo',
@@ -18,8 +19,9 @@ var elementos_data = [{
     correct:'7'
 },{
     id:2,
+    audio:'2.mp3',
     label:'Tarjeta de propiedad del vehículo',
-    descripcion:'Debe estar a nombre del trabajador Revisión técnico-mecánica y de gases.',
+    descripcion:'Debe estar a nombre del trabajador.',
     cuerpo:'bolsillo',
     img:'tarjeta.png',
     img2:'',
@@ -31,6 +33,7 @@ var elementos_data = [{
     correct:'7'
 },{
     id:3,
+    audio:'3.mp3',
     label:'Revisión técnico-mecánica',
     descripcion:'y gases, certificación actualizada.',
     cuerpo:'bolsillo',
@@ -44,6 +47,7 @@ var elementos_data = [{
     correct:'8'
 },{
     id:4,
+    audio:'4.mp3',
     label:'SOAT',
     descripcion:'Seguro Obligatorio contra Accidentes de Tránsito vigente.',
     cuerpo:'bolsillo',
@@ -57,6 +61,7 @@ var elementos_data = [{
     correct:'8'
 },{
     id:5,
+    audio:'5.mp3',
     label:'Chaqueta o Prenda reflectiva',
     descripcion:'Cuando se conduzca entre las 18:00 pm y las 6:00 am horas del día siguiente, y siempre que la visibilidad sea escasa.',
     cuerpo:'pecho',
@@ -70,6 +75,7 @@ var elementos_data = [{
     correct:'4'
 },{
     id:6,
+    audio:'6.mp3',
     label:'Coderas',
     descripcion:'Coderas',
     cuerpo:'codos',
@@ -83,6 +89,7 @@ var elementos_data = [{
     correct:'5'
 },{
     id:7,
+    audio:'7.mp3',
     label:'Guantes',
     descripcion:'Se deberán portar permanentemente durante la conducción de la motocicleta',
     cuerpo:'manos',
@@ -96,6 +103,7 @@ var elementos_data = [{
     correct:'6'
 },{
     id:8,
+    audio:'8.mp3',
     label:'Rodilleras',
     descripcion:'Rodilleras',
     cuerpo:'rodillas',
@@ -109,6 +117,7 @@ var elementos_data = [{
     correct:'9'
 },{
     id:9,
+    audio:'9.mp3',
     label:'Botas de seguridad con puntera',
     descripcion:'Botas de seguridad con puntera',
     cuerpo:'pies',
@@ -122,6 +131,7 @@ var elementos_data = [{
     correct:'10'
 },{
     id:10,
+    audio:null,
     label:'Bufanda',
     descripcion:'Bufanda',
     cuerpo:'cuello',
