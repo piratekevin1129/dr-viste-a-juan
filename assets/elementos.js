@@ -6,6 +6,7 @@ var personaje_data = {
 var elementos_data = [{
     id:1,
     audio:'1.mp3',
+    audiodata:null,
     label:'Licencia de conducción',
     descripcion:'Vigente, categoría A2, certificada por el Ministerio de Tránsito y Transporte.',
     cuerpo:'bolsillo',
@@ -20,6 +21,7 @@ var elementos_data = [{
 },{
     id:2,
     audio:'2.mp3',
+    audiodata:null,
     label:'Tarjeta de propiedad del vehículo',
     descripcion:'Debe estar a nombre del trabajador.',
     cuerpo:'bolsillo',
@@ -34,6 +36,7 @@ var elementos_data = [{
 },{
     id:3,
     audio:'3.mp3',
+    audiodata:null,
     label:'Revisión técnico-mecánica',
     descripcion:'y gases, certificación actualizada.',
     cuerpo:'bolsillo',
@@ -48,6 +51,7 @@ var elementos_data = [{
 },{
     id:4,
     audio:'4.mp3',
+    audiodata:null,
     label:'SOAT',
     descripcion:'Seguro Obligatorio contra Accidentes de Tránsito vigente.',
     cuerpo:'bolsillo',
@@ -62,6 +66,7 @@ var elementos_data = [{
 },{
     id:5,
     audio:'5.mp3',
+    audiodata:null,
     label:'Chaqueta o Prenda reflectiva',
     descripcion:'Cuando se conduzca entre las 18:00 pm y las 6:00 am horas del día siguiente, y siempre que la visibilidad sea escasa.',
     cuerpo:'pecho',
@@ -76,6 +81,7 @@ var elementos_data = [{
 },{
     id:6,
     audio:'6.mp3',
+    audiodata:null,
     label:'Coderas',
     descripcion:'Coderas',
     cuerpo:'codos',
@@ -90,6 +96,7 @@ var elementos_data = [{
 },{
     id:7,
     audio:'7.mp3',
+    audiodata:null,
     label:'Guantes',
     descripcion:'Se deberán portar permanentemente durante la conducción de la motocicleta',
     cuerpo:'manos',
@@ -104,6 +111,7 @@ var elementos_data = [{
 },{
     id:8,
     audio:'8.mp3',
+    audiodata:null,
     label:'Rodilleras',
     descripcion:'Rodilleras',
     cuerpo:'rodillas',
@@ -118,6 +126,7 @@ var elementos_data = [{
 },{
     id:9,
     audio:'9.mp3',
+    audiodata:null,
     label:'Botas de seguridad con puntera',
     descripcion:'Botas de seguridad con puntera',
     cuerpo:'pies',
@@ -132,6 +141,7 @@ var elementos_data = [{
 },{
     id:10,
     audio:null,
+    audiodata:null,
     label:'Bufanda',
     descripcion:'Bufanda',
     cuerpo:'cuello',
@@ -145,6 +155,8 @@ var elementos_data = [{
     correct:'3'
 },{
     id:11,
+    audio:null,
+    audiodata:null,
     label:'',
     descripcion:'',
     cuerpo:'',
@@ -156,6 +168,8 @@ var elementos_data = [{
     size2:[]
 },{
     id:12,
+    audio:null,
+    audiodata:null,
     label:'',
     descripcion:'',
     cuerpo:'',
@@ -167,6 +181,8 @@ var elementos_data = [{
     size2:[]
 },{
     id:13,
+    audio:null,
+    audiodata:null,
     label:'',
     descripcion:'',
     cuerpo:'',
@@ -178,6 +194,8 @@ var elementos_data = [{
     size2:[]
 },{
     id:14,
+    audio:null,
+    audiodata:null,
     label:'',
     descripcion:'',
     cuerpo:'',
@@ -189,6 +207,8 @@ var elementos_data = [{
     size2:[]
 },{
     id:15,
+    audio:null,
+    audiodata:null,
     label:'',
     descripcion:'',
     cuerpo:'',
@@ -200,6 +220,8 @@ var elementos_data = [{
     size2:[]
 },{
     id:16,
+    audio:null,
+    audiodata:null,
     label:'',
     descripcion:'',
     cuerpo:'',
@@ -211,6 +233,8 @@ var elementos_data = [{
     size2:[]
 },{
     id:17,
+    audio:null,
+    audiodata:null,
     label:'',
     descripcion:'',
     cuerpo:'',
@@ -222,6 +246,8 @@ var elementos_data = [{
     size2:[]
 },{
     id:18,
+    audio:null,
+    audiodata:null,
     label:'',
     descripcion:'',
     cuerpo:'',
@@ -233,6 +259,8 @@ var elementos_data = [{
     size2:[]
 },{
     id:19,
+    audio:null,
+    audiodata:null,
     label:'',
     descripcion:'',
     cuerpo:'',
@@ -244,6 +272,8 @@ var elementos_data = [{
     size2:[]
 },{
     id:20,
+    audio:null,
+    audiodata:null,
     label:'',
     descripcion:'',
     cuerpo:'',

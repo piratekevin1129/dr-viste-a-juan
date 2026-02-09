@@ -46,8 +46,8 @@ var casillero_counter = 0
 function loadCasilleros(){
     if(casillero_counter==elementos_data.length){
         //listo
-        prepareCasilleros()
-        comenzarJuego2()
+        casillero_counter = 0
+        loadCasillerosAudio()
     }else{
         loadCasillero()
     }
@@ -62,8 +62,10 @@ function loadCasillero(){
             if(elementos_data[casillero_counter].img2!=""){
                 loadImg({src:'./assets/images/epp/'+elementos_data[casillero_counter].img2, callBack: function(data2){
                     elementos_data[casillero_counter].imgdata2 = {w:data2.width,h:data2.height}
+                    updateLoader()
+                    
                     casillero_counter++
-                    loadCasilleros()    
+                    loadCasilleros()
                 }})            
             }else{
                 casillero_counter++
@@ -73,6 +75,31 @@ function loadCasillero(){
     }else{
         casillero_counter++
         loadCasilleros()
+    }
+}
+
+function loadCasillerosAudio(){
+    console.log(casillero_counter+"-"+elementos_data.length)
+    if(casillero_counter==elementos_data.length){
+        //listo
+        prepareCasilleros()
+        comenzarJuego2()
+    }else{
+        loadCasilleroAudio()
+    }
+}
+
+function loadCasilleroAudio(){
+    if(elementos_data[casillero_counter].audio!=null){
+        loadTrack({src:'./assets/audios/'+elementos_data[casillero_counter].audio, callBack: function(data3){
+            updateLoader()
+            elementos_data[casillero_counter].audiodata = data3
+            casillero_counter++
+            loadCasillerosAudio()
+        }})
+    }else{
+        casillero_counter++
+        loadCasillerosAudio()
     }
 }
 
@@ -294,6 +321,8 @@ function clickVerMas(inf){
         text:'Se recomienda que los pantalones deben ser semi ajustados a la pierna y largo hasta el tobillo, preferiblemente dentro de la bota para evitar que la prenda quede suelta y con posibilidad de atrapamiento en algún punto de la moto.',
         label:'Cerrar'
     })
+    intro_mp3.currentTime = 0
+    intro_mp3.play()
 }
 
 var animacion_contenedor = null
@@ -324,6 +353,7 @@ function comprobarPersonaje(){
                 text:elementos_data[ind].descripcion,
                 value:'Siguiente',
                 ref:'personaje-epp-'+elementos_data[ind].id,
+                ind:ind,
                 orientation:'right'
             })
         }

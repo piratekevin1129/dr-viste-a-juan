@@ -133,6 +133,7 @@
         var correcto_mp3 = null;
         var incorrecto_mp3 = null;
         var ganar_mp3 = null;
+        var intro_mp3 = null;
 
         window.onload = function(){
             loadTrack({src: 'assets/sounds/abrir.mp3', callBack: function(data){
@@ -162,7 +163,11 @@
             loadTrack({src: 'assets/sounds/ganar.mp3', callBack: function(data){
                 ganar_mp3 = data
                 checkAudios(true)
-            }})                
+            }})
+            loadTrack({src: 'assets/audios/intro.mp3', callBack: function(data){
+                intro_mp3 = data
+                checkAudios(true)
+            }})
         }
 
         function comenzarJuego(){

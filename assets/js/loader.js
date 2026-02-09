@@ -1,7 +1,20 @@
 //0 images + 4 audios
-var total_audios = 7
-var total_images = elementos_data.length
-var total_files = (total_audios + total_images)
+var total_audios = 8
+var total_images = 0
+var total_files = 0;
+for(i = 0;i<elementos_data.length;i++){
+    if(elementos_data[i].img!=""){
+        total_files++
+    }
+    if(elementos_data[i].img2!=""){
+        total_files++
+    }
+    if(elementos_data[i].audio!=null){
+        total_files++
+    }
+}
+
+var total_files = (total_audios + total_images + total_files)
 
 var files_loaded = 0
 function updateLoader(){

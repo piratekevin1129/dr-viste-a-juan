@@ -27,6 +27,8 @@ function setInstrucciones(){
     getE('instruccion').className = "instruccion-on"
 }
 
+var audio_instruccion = null;
+
 function prepareInstruccion(in_game = false,data = null){
     if(in_game){
         getE('instruccion-title').innerHTML = data.title
@@ -72,9 +74,6 @@ function prepareInstruccion(in_game = false,data = null){
         
         if(instrucciones_data[current_instruccion].orientation=='top'){
             left_box = (rect_ref.left + (rect_ref.width / 2)) - (rect_box.width / 2)
-            if((left_box + rect_box.width) > window.innerWidth){
-                left_box = (window.innerWidth - (rect_box.width + 10))
-            }
             top_box = (rect_ref.top - (rect_box.height + 10))
         }else if(instrucciones_data[current_instruccion].orientation=='right'){
             left_box = (rect_ref.left + rect_ref.width + 10)
@@ -84,6 +83,12 @@ function prepareInstruccion(in_game = false,data = null){
             top_box = (rect_ref.top + (rect_ref.height / 2)) - (rect_box.height / 2)
         }
 
+        if((left_box + rect_box.width) > window.innerWidth){
+            left_box = (window.innerWidth - (rect_box.width + 10))
+        }
+        if((top_box + rect_box.height) > window.innerHeight){
+            top_box = (window.innerHeight - (rect_box.height + 5))
+        }
     }else{
         var w2 = (rect_box.left + (rect_box.width / 2))
         var h2 = (rect_box.top + (rect_box.height / 2))
@@ -98,6 +103,13 @@ function prepareInstruccion(in_game = false,data = null){
 
     getE('instruccion-box').style.left = left_box+'px'
     getE('instruccion-box').style.top = top_box+'px'
+    if(actividad_finalizada){
+        if(audio_instruccion!=null){
+            audio_instruccion.pause()
+        }
+        audio_instruccion = elementos_data[instrucciones_data[current_instruccion].ind].audiodata
+        audio_instruccion.play()
+    }
 }
 
 function nextInstruccion(){
@@ -124,6 +136,7 @@ function setInstruccion2(data){
 
 function cerrarInstruccion(){
     getE('instruccion').className = "instruccion-off"
-    click_mp3.play()
     getE("personaje-label").className = "personaje-label-off"
+    intro_mp3.pause()
+    click_mp3.play()
 }
