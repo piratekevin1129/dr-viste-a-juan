@@ -140,45 +140,50 @@ var elementos_data = [{
     correct:'10'
 },{
     id:10,
+    audio:'10.mp3',
+    audiodata:null,
+    label:'Casco',
+    descripcion:'Casco de seguridad',
+    cuerpo:'cabeza',
+    img:'casco.png',
+    img2:'',
+    imgdata:null,
+    imgdata2:null,
+    size1:'',//alto
+    size2:[102,118,63,0],
+    required:true,
+    correct:1
+},{
+    id:11,
+    audio:'11.mp3',
+    audiodata:null,
+    label:'Maletín',
+    descripcion:'Maletín suministrado por la empresa la cooperativa debidamente identificado con el logo de la rebaja, número de la placa de la moto en cinta reflectiva, y demás distintivos del servicio a domicilio',
+    cuerpo:'pecho',
+    img:'maletin.png',
+    img2:'',
+    img3:'maletin3.png',
+    imgdata:null,
+    imgdata2:null,
+    size1:'1',//alto
+    size2:[216,302,7,81],
+    required:true,
+    correct:'4'
+},{
+    id:12,
     audio:null,
     audiodata:null,
     label:'Bufanda',
     descripcion:'Bufanda',
     cuerpo:'cuello',
-    img:'demo2.png',
+    img:'bufanda.png',
     img2:'',
     imgdata:null,
     imgdata2:null,
-    size1:'2/3',//alto
-    size2:[97,94,54,95],
+    size1:'4/5',//alto
+    size2:[86,165,69,104],
     required:false,
     correct:'3'
-},{
-    id:11,
-    audio:null,
-    audiodata:null,
-    label:'',
-    descripcion:'',
-    cuerpo:'',
-    img:'',
-    img2:'',
-    imgdata:null,
-    imgdata2:null,
-    size1:'',//alto
-    size2:[]
-},{
-    id:12,
-    audio:null,
-    audiodata:null,
-    label:'',
-    descripcion:'',
-    cuerpo:'',
-    img:'',
-    img2:'',
-    imgdata:null,
-    imgdata2:null,
-    size1:'',//alto
-    size2:[]
 },{
     id:13,
     audio:null,
