@@ -64,9 +64,17 @@ function loadCasillero(){
                     elementos_data[casillero_counter].imgdata2 = {w:data2.width,h:data2.height}
                     updateLoader()
                     
-                    casillero_counter++
-                    loadCasilleros()
-                }})            
+                    if(elementos_data[casillero_counter].img3!=""){
+                        loadImg({src:'./assets/images/epp/'+elementos_data[casillero_counter].img3, callBack: function(data3){
+                            elementos_data[casillero_counter].imgdata3 = {w:data3.width,h:data3.height}
+                            casillero_counter++
+                            loadCasilleros()
+                        }})
+                    }else{
+                        casillero_counter++
+                        loadCasilleros()
+                    }
+                }})
             }else{
                 casillero_counter++
                 loadCasilleros()
@@ -283,22 +291,45 @@ function upEpp(event){
         //colocar epp
         var epp_nuevo = document.createElement('div')
         epp_nuevo.className = 'personaje-epp'
-        epp_nuevo.style.width = epp_w+'px'
-        epp_nuevo.style.height = epp_h+'px'
 
-        var per_x = (epp_selected.size2[2] * 100) / personaje_data.width
-        var per_y = (epp_selected.size2[3] * 100) / personaje_data.height
-        var epp_x = (personaje_data2[0] * per_x) / 100
-        var epp_y = (personaje_data2[1] * per_y) / 100
+        var per_x = 0
+        var per_y = 0
+        var epp_x = 0
+        var epp_y = 0
+
+        
+        if(epp_selected.img3!=''){
+            epp_nuevo.style.backgroundImage = 'url(./assets/images/epp/'+epp_selected.img3+')'
+            var epp_x3 = (epp_selected.size3[0] * 100) / personaje_data.width
+            var epp_y3 = (epp_selected.size3[1] * 100) / personaje_data.height
+            var epp_w3 = (personaje_data2[0] * epp_x3) / 100
+            var epp_h3 = (personaje_data2[1] * epp_y3) / 100
+
+            per_x = (epp_selected.size3[2] * 100) / personaje_data.width
+            per_y = (epp_selected.size3[3] * 100) / personaje_data.height
+            epp_x = (personaje_data2[0] * per_x) / 100
+            epp_y = (personaje_data2[1] * per_y) / 100
+
+            epp_nuevo.style.width = epp_w3+'px'
+            epp_nuevo.style.height = epp_h3+'px'
+        }else{
+            per_x = (epp_selected.size2[2] * 100) / personaje_data.width
+            per_y = (epp_selected.size2[3] * 100) / personaje_data.height
+            epp_x = (personaje_data2[0] * per_x) / 100
+            epp_y = (personaje_data2[1] * per_y) / 100
+
+            epp_nuevo.style.width = epp_w+'px'
+            epp_nuevo.style.height = epp_h+'px'
+
+            if(epp_selected.img2!=''){
+                epp_nuevo.style.backgroundImage = 'url(./assets/images/epp/'+epp_selected.img2+')'
+            }else{
+                epp_nuevo.style.backgroundImage = 'url(./assets/images/epp/'+epp_selected.img+')'
+            }
+        }
 
         epp_nuevo.style.left = epp_x+'px'
         epp_nuevo.style.top = epp_y+'px'
-
-        if(epp_selected.img2!=''){
-            epp_nuevo.style.backgroundImage = 'url(./assets/images/epp/'+epp_selected.img2+')'
-        }else{
-            epp_nuevo.style.backgroundImage = 'url(./assets/images/epp/'+epp_selected.img+')'
-        }
 
         epp_nuevo.setAttribute('id','personaje-epp-'+epp_selected.id)
         epp_nuevo.setAttribute('data-id',epp_selected.id)
@@ -342,7 +373,10 @@ function comprobarPersonaje(){
         }
     }
 
-    if(correctos==elementos_correctos.length){
+    if(
+        correctos==elementos_correctos.length&&
+        incorrectos.length==0
+    ){
         actividad_finalizada = true
         instrucciones_data = []
         //comenzar recorrido para explicación de epp

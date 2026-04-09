@@ -12,6 +12,7 @@ var elementos_data = [{
     cuerpo:'bolsillo',
     img:'licensia.png',
     img2:'',
+    img3:'',
     imgdata:null,
     imgdata2:null,
     size1:'1/2',//alto
@@ -27,6 +28,7 @@ var elementos_data = [{
     cuerpo:'bolsillo',
     img:'tarjeta.png',
     img2:'',
+    img3:'',
     imgdata:null,
     imgdata2:null,
     size1:'1/2',//alto
@@ -42,6 +44,7 @@ var elementos_data = [{
     cuerpo:'bolsillo',
     img:'tecnomecanica.png',
     img2:'',
+    img3:'',
     imgdata:null,
     imgdata2:null,
     size1:'2/3',//alto
@@ -57,6 +60,7 @@ var elementos_data = [{
     cuerpo:'bolsillo',
     img:'soat.png',
     img2:'',
+    img3:'',
     imgdata:null,
     imgdata2:null,
     size1:'2/3',//alto
@@ -72,6 +76,7 @@ var elementos_data = [{
     cuerpo:'pecho',
     img:'chaqueta.png',
     img2:'',
+    img3:'',
     imgdata:null,
     imgdata2:null,
     size1:'1',//alto
@@ -87,6 +92,7 @@ var elementos_data = [{
     cuerpo:'codos',
     img:'coderas.png',
     img2:'coderas2.png',
+    img3:'',
     imgdata:null,
     imgdata2:null,
     size1:'1/3',//alto
@@ -102,6 +108,7 @@ var elementos_data = [{
     cuerpo:'manos',
     img:'guantes.png',
     img2:'guantes2.png',
+    img3:'',
     imgdata:null,
     imgdata2:null,
     size1:'1/3',//alto
@@ -117,6 +124,7 @@ var elementos_data = [{
     cuerpo:'rodillas',
     img:'rodilleras.png',
     img2:'rodilleras2.png',
+    img3:'',
     imgdata:null,
     imgdata2:null,
     size1:'2/3',//alto
@@ -132,6 +140,7 @@ var elementos_data = [{
     cuerpo:'pies',
     img:'botas.png',
     img2:'botas2.png',
+    img3:'',
     imgdata:null,
     imgdata2:null,
     size1:'4/5',//alto
@@ -144,15 +153,16 @@ var elementos_data = [{
     audiodata:null,
     label:'Casco',
     descripcion:'Casco de seguridad',
-    cuerpo:'cabeza',
+    cuerpo:'cara',
     img:'casco.png',
     img2:'',
+    img3:'',
     imgdata:null,
     imgdata2:null,
     size1:'',//alto
     size2:[102,118,63,0],
     required:true,
-    correct:1
+    correct:'2'
 },{
     id:11,
     audio:'11.mp3',
@@ -166,7 +176,8 @@ var elementos_data = [{
     imgdata:null,
     imgdata2:null,
     size1:'1',//alto
-    size2:[216,302,7,81],
+    size2:[229,295,0,71],
+    size3:[216,302,7,81],
     required:true,
     correct:'4'
 },{
@@ -175,15 +186,16 @@ var elementos_data = [{
     audiodata:null,
     label:'Bufanda',
     descripcion:'Bufanda',
-    cuerpo:'cuello',
+    cuerpo:'pecho',
     img:'bufanda.png',
     img2:'',
+    img3:'',
     imgdata:null,
     imgdata2:null,
     size1:'4/5',//alto
     size2:[86,165,69,104],
     required:false,
-    correct:'3'
+    correct:'4'
 },{
     id:13,
     audio:null,
@@ -192,7 +204,6 @@ var elementos_data = [{
     descripcion:'',
     cuerpo:'',
     img:'',
-    img2:'',
     imgdata:null,
     imgdata2:null,
     size1:'',//alto
@@ -205,7 +216,6 @@ var elementos_data = [{
     descripcion:'',
     cuerpo:'',
     img:'',
-    img2:'',
     imgdata:null,
     imgdata2:null,
     size1:'',//alto
@@ -218,7 +228,6 @@ var elementos_data = [{
     descripcion:'',
     cuerpo:'',
     img:'',
-    img2:'',
     imgdata:null,
     imgdata2:null,
     size1:'',//alto
@@ -231,7 +240,6 @@ var elementos_data = [{
     descripcion:'',
     cuerpo:'',
     img:'',
-    img2:'',
     imgdata:null,
     imgdata2:null,
     size1:'',//alto
@@ -244,7 +252,6 @@ var elementos_data = [{
     descripcion:'',
     cuerpo:'',
     img:'',
-    img2:'',
     imgdata:null,
     imgdata2:null,
     size1:'',//alto
@@ -257,7 +264,6 @@ var elementos_data = [{
     descripcion:'',
     cuerpo:'',
     img:'',
-    img2:'',
     imgdata:null,
     imgdata2:null,
     size1:'',//alto
@@ -270,7 +276,6 @@ var elementos_data = [{
     descripcion:'',
     cuerpo:'',
     img:'',
-    img2:'',
     imgdata:null,
     imgdata2:null,
     size1:'',//alto
@@ -283,14 +288,13 @@ var elementos_data = [{
     descripcion:'',
     cuerpo:'',
     img:'',
-    img2:'',
     imgdata:null,
     imgdata2:null,
     size1:'',//alto
     size2:[]
 }]
 
-var elementos_correctos = [1,2,3,4,5,6,7,8,9]
+var elementos_correctos = [1,2,3,4,5,6,7,8,9,10,11]
 
 var elementos_epp1 = []
 while(elementos_epp1.length<elementos_data.length){
@@ -300,9 +304,8 @@ while(elementos_epp1.length<elementos_data.length){
     }
 }
 
-//var elementos_epp = [0,1,2,3,4,5,6,7,8]
 var elementos_epp = []
 for(i = 0;i<elementos_epp1.length;i++){
     elementos_epp.push(elementos_epp1[i]-1)
 }
-console.log(elementos_epp)
+console.log(elementos_epp1)

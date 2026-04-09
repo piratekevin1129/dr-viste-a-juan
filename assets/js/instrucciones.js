@@ -116,6 +116,8 @@ function nextInstruccion(){
     if(current_instruccion==(instrucciones_data.length-1)){
         if(actividad_finalizada){
             //siguiente actividad aquí
+            parent.unlockNextTema()
+            parent.nextTema()
         }else{
             getE('instruccion').className = "instruccion-off"
             getE("personaje-label").className = "personaje-label-on"

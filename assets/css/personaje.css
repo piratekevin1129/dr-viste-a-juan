@@ -85,6 +85,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    z-index: 4;
 }
 .personaje-parte > div{
     position: relative;
@@ -167,7 +168,7 @@
 }
 
 .personaje-epp{
-    z-index: 1;
+    z-index: 2;
     animation: animacion-epp-entrada 0.5s 1 linear forwards;
 }
 @keyframes animacion-epp-entrada {
@@ -180,6 +181,9 @@
         opacity: 1;
     }
 }
-#personaje-epp-5{
+#personaje-epp-12{/*bufanda*/
+    z-index: 1;
+}
+#personaje-epp-5{/*chaqueta*/
     z-index: 0;
 }
